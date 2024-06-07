@@ -1,10 +1,10 @@
 import React from 'react';
 
-const ChildComponent1 = (props) => {
+const ChildComponent1 = ({ updateOption }) => {
   return (
-    <div>
+    <div className="child-component-1">
       <h2>Child Component 1</h2>
-      <button onClick={() => props.updateOption("Option 1")}>Option 1</button>
+      <button onClick={() => updateOption("Option 1")}>Option 1</button>
     </div>
   );
 };
