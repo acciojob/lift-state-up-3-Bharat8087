@@ -3,9 +3,9 @@ import ChildComponent1 from './ChildComponent1';
 import ChildComponent2 from './ChildComponent2';
 
 const App = () => {
-  const [selectedOption, setSelectedOption] = useState('');
+  const [selectedOption, setSelectedOption] = useState("");
 
-  const handleOptionSelect = (option) => {
+  const updateOption = (option) => {
     setSelectedOption(option);
   };
 
@@ -13,8 +13,8 @@ const App = () => {
     <div className="parent">
       <h1>Parent Component</h1>
       <p>Selected Option: {selectedOption}</p>
-      <ChildComponent1 onSelect={handleOptionSelect} />
-      <ChildComponent2 onSelect={handleOptionSelect} />
+      <ChildComponent1 updateOption={updateOption} />
+      <ChildComponent2 updateOption={updateOption} />
     </div>
   );
 };
