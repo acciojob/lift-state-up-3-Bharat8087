@@ -1,14 +1,11 @@
 
-
 import React from 'react';
 
-const ChildComponent1 = ({ selectedOption, onOptionSelect }) => {
+const ChildComponent1 = ({ onSelect }) => {
   return (
     <div>
       <h2>Child Component 1</h2>
-      <button onClick={() => onOptionSelect('Option 1')} disabled={selectedOption === 'Option 1'}>
-        Option 1
-      </button>
+      <button onClick={() => onSelect('Option 1')}>Select Option 1</button>
     </div>
   );
 };
